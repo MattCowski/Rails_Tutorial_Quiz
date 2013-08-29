@@ -1,0 +1,12 @@
+research:
+
+	rails12 factor gem
+	didn't bundle --without production
+	initializers
+
+DONT FORGET:
+	gem rspec-rails
+	hide the secret token
+		git ignore
+		rake secret
+	rails generate rspec:install
