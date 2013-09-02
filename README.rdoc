@@ -44,4 +44,4 @@ tar -czvf FILE.tgz
 rm file1 file2
 	-f force
 	-i with confirmation
-mkdir -p /one/two/three
+mkdir -p  /one/two/three
