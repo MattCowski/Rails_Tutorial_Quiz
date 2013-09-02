@@ -3,10 +3,45 @@ research:
 	rails12 factor gem
 	didn't bundle --without production
 	initializers
+	selenium-webdriver
 
-DONT FORGET:
-	gem rspec-rails
+
+Hartle's RailsTutorial Quick Launch:
+Gemfile:
+	gem rspec-rails, capybara
+	group dev test and production
 	hide the secret token
-		git ignore
+		git ignore ?
 		rake secret
 	rails generate rspec:install
+	heroku create
+	git push heroku master
+	heroku run rake db:migrate
+		heroku logs
+	spec_helper.rb config.include Capybara::DSL
+	help page needs test 
+	add about page
+
+<% provide(:title, 'Home') %>
+
+Sublime Pro Tips:
+look up with command palette
+learn commands i.e. "fold"
+hello "world"
+hello "world
+hello "world
+
+Cmd Line Pro Tips:
+cat FILE | grep foobar
+cat FILE | mail bob@email
+-v means verbose
+tar -cvf CREATEDIR COMPRESSFILE
+tar -czvf FILE.tgz
+	-c compress
+	-x expand
+	-v verbose
+	-f file
+rm file1 file2
+	-f force
+	-i with confirmation
+mkdir -p /one/two/three
