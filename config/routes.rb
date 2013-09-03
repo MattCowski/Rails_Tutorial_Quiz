@@ -1,7 +1,7 @@
 RailsTutorialQuiz::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/help"
-  get "static_pages/about"
+  resources :posts
+  resources :static_pages
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -18,7 +18,7 @@ RailsTutorialQuiz::Application.routes.draw do
   #   resources :products
 
   # Example resource route with options:
-  #   resources :products do
+
   #     member do
   #       get 'short'
   #       post 'toggle'
