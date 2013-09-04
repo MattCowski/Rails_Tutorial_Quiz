@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 class PostsController < ApplicationController
+=======
+aclass PostsController < ApplicationController
+>>>>>>> af6f36d0210a4cfd46405f3410d44a87e1120528
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts

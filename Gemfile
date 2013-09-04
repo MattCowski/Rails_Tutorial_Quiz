@@ -7,10 +7,18 @@ gem 'rails', '4.0.0'
 group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails'
+	gem 'guard-rspec'
+
+	gem 'spork-rails', github: 'sporkrb/spork-rails'
+	gem 'guard-spork'
+	gem 'childprocess'
 end
 
 group :test do
 	gem 'capybara'
+	gem 'selenium-webdriver'
+	gem 'growl'
+	gem 'libnotify'
 end
 
 group :production do
