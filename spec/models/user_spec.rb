@@ -3,7 +3,7 @@ require 'spec_helper'
 describe User do
 	before {@user = User.new(name: "Bob", email: "bob@email.com", password: "foobar",
                           password_confirmation: "foobar")}
-	# create user
+	
 	subject {@user}
 
 	it {should respond_to(:name)}
@@ -13,7 +13,7 @@ describe User do
   it {should respond_to(:password_confirmation)}
 	
   it { should be_valid }
-
+  it{should respond_to(:authenticate)}
 
 	describe "when user not present" do
 		before {@user.name = ""}
@@ -69,13 +69,27 @@ describe User do
     it {should_not be_valid}
   end
 
+  describe "password is too short" do
+    before do
+    @user.password = @user.password_confirmation = 'a'*5
+    end
+    it {should be_invalid}
+  end
+
+  describe "return value of authenticate method" do
+    before {@user.save}
+    let(:found_user) {User.find_by(email: @user.email )}
+
+     describe "with valid password" do
+        it{should eq found_user.authenticate(@user.password)}
+     end
+
+     describe "with invalid password" do
+      let (:invalid_user){found_user.authenticate("invalid")}
+      it{should_not eq invalid_user}
+      specify{expect(invalid_user).to be_false}
+     end
+  end
 
 
-
-
-
-
-
-
-	
 end
