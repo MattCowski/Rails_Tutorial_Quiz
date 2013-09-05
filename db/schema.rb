@@ -11,11 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130904221510) do
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20130903145542) do
+=======
+ActiveRecord::Schema.define(version: 20130903133129) do
+>>>>>>> af6f36d0210a4cfd46405f3410d44a87e1120528
 
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

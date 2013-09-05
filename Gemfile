@@ -17,9 +17,8 @@ end
 group :test do
 	gem 'capybara'
 	gem 'selenium-webdriver'
-	gem 'libnotify' if /linux/ =~ RUBY_PLATFORM
-	gem 'growl' if /darwin/ =~ RUBY_PLATFORM
-
+	gem 'growl'
+	gem 'libnotify'
 end
 
 group :production do
