@@ -59,6 +59,14 @@ describe User do
     end
   end
 
+  describe "email address is downcase" do 
+    it "should be saved as downcase" do
+      @user.email = "crazyBoB@gmail.com"
+      @user.save
+      expect(@user.email).to eq "crazyBoB@gmail.com".downcase
+    end
+  end
+
   describe "when password is not present" do
     before {@user.password = "", @user.password_confirmation=""}
     it {should_not be_valid}
